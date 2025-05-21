@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index 페이지</title>
+    <link rel="stylesheet" th:href="@{/css/base.css}" />
+    <style>
+        header{
+            height:100px;
+            line-height: 100px;
+            margin-bottom: 20px;
+            background-color: aquamarine;
+        }
+        header ul{
+            list-style: none;
+            display: flex;
+            gap:80px;
+        }
+        #wrap{
+            width:100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction:row ;
+        }
+        #left_aside{
+            width: 200px;
+            background-color: antiquewhite;
+            margin-right:20px;
+            height: 600px;
+        }
+        #right_aside{
+            width:1000px;
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a th:href="@{/main}">HOME</a></li>
+            <li><a th:href="@{/main/menu}">메뉴1</a></li>
+            <li><a th:href="@{/main/menu2}">메뉴2</a></li>
+        </ul>
+    </header>
+    <section id="wrap">
+        <div id="left_aside" th:include="${left_model}?${left_model}:left"></div>
+        <div id="right_aside" th:insert="${right_model}?${right_model}:right"></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+header{
+    width: 100%;
+    text-align: center;
+    background-color: blue;
+    color : white;
+    height: 60px;
+    line-height: 60px;
+}
+
+/* .topNav */
+div > .topNav{
+    width : 100%;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto;
+    background-color: #68d0fc;
+}
+div > .topNav > ul{
+    max-width:800px;
+    display: flex;
+    gap : 40px;
+    justify-content :center;
+    flex-flow : nowrap;  /* wrap -자동 줄바꿈 , nowrap - 자동 줄바꿈 안됨 */
+    font-size:1.2rem;
+    padding-left: 100px;
+}
+.topNav li>a{
+    padding: 5px 10px;
+}
+
+.topNav a:hover{
+    color:red;
+}
